@@ -15,7 +15,7 @@ from modules.feat import *
 
 def predictor(image_link, category_id, entity_name):
     '''
-    Call your model/approach here
+    Call model/approach here
     '''
     try:
         pipeline = ImageProcessingPipeline(image_link)
@@ -36,12 +36,12 @@ def save_progress(df, output_filename):
 if __name__ == "__main__":
     DATASET_FOLDER = './data/'
     # Ouput file
-    output_filename = os.path.join(DATASET_FOLDER, 'test_out.csv')
+    output_filename = os.path.join(DATASET_FOLDER, 'testt_out.csv')
 
     # Input file
     test = pd.read_csv(os.path.join(DATASET_FOLDER, 'test.csv'))
 
-    # Check if there's a previously saved file to resume from
+    # Checking if there's a previously saved file to resume from
     if os.path.exists(output_filename):
         processed_test = pd.read_csv(output_filename)
         start_index = len(processed_test)
@@ -57,7 +57,6 @@ if __name__ == "__main__":
             prediction = predictor(row['image_link'], row['group_id'], row['entity_name'])
             new_row = pd.DataFrame({'index': [row['index']], 'prediction': [prediction]})
 
-            # Use pd.concat instead of append
             processed_test = pd.concat([processed_test, new_row], ignore_index=True)
             
             # Save after every row or at certain intervals (e.g., every 10 rows)

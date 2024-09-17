@@ -25,7 +25,7 @@ class ImageProcessingPipeline:
         if self.image is None:
             raise FileNotFoundError("Image is not downloaded.")
         
-        # Initialize the EasyOCR reader (supports multiple languages, here we use English)
+        # Initialize the EasyOCR reader (supports multiple languages, here we have used English)
         reader = easyocr.Reader(['en'])
         
         # Convert the image to RGB as EasyOCR expects RGB input
