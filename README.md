@@ -1,9 +1,9 @@
 # CSV and Image Text Extraction App
 
 **Developed by:**
+- **Ritik Gupta** [GitHub](https://github.com/guptaritik17)
 - **Pratham Bisht** [GitHub](https://github.com/Pratham216)
 - **Keshav Kushwaha** [GitHub](https://github.com/offline-keshav)
-- **Ritik Gupta** [GitHub](https://github.com/guptaritik17)
 
 Welcome to the **CSV and Image Text Extraction App**! This project is designed to perform two main tasks:
 
